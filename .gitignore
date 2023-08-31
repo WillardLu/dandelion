@@ -1,0 +1,16 @@
+*.aux
+*.log
+*.out
+*.gz
+*.toc
+*.fdb_latexmk
+*.fls
+*.xdv
+*.pytxcode
+*.pkl
+*.pytxmcr
+*.pytxpyg
+*.stdout
+*.pyc
+*.pygtex
+*.pygstyle
