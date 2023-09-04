@@ -60,11 +60,16 @@ int main(void) {
     return 0;
 }
 \end{minted}
+
+% 从外部文件导入代码
+\inputminted[linenos=true,frame=single,breaklines]{c}{main.cu}
 \end{document}
 ```
 
 #### 2.2 效果
 ![使用宏包minted在LaTeX中显示程序代码](sample1.png)
+
+从外部文件导入代码这条的生成效果没有列出来，因为内容太多，太占篇幅。
 
 #### 2.3 参数说明
 这里指的是\begin{minted}命令后中括号内的参数。中括号后面的大括号里面是编程语言名称。
@@ -73,4 +78,6 @@ int main(void) {
 * frame：设置边框的样式，其他可选项包括 lines、leftline, topline, bottomline 等。
 * linenos：设置是否显示代码的行号。
 
-未完，慢慢添加内容吧……
+
+#### 2.4 其他说明
+* 从外部文件导入代码，在参数设置上与直接列出代码的一样。只是要注意路径问题，如果不方便像本例这样在同一个文件夹下的话（实际上，同一目录下的情况非常少，一般都会在外部），可以使用软链接来指向。
