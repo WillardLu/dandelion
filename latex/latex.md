@@ -4,4 +4,6 @@
 
 ### [排版](page_layout.md)
 
-### [绘图]()
+### [符号](symbol.md)
+
+### [绘图](drawing.md)
