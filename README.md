@@ -7,5 +7,5 @@ My dataset.
 
 ---
 
-## [LaTeX](latex.md)
+## [LaTeX](latex/latex.md)
 
