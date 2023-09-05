@@ -1,0 +1,19 @@
+% 繁星间漫步，陆巍的博客
+\documentclass{ctexart}
+
+\usepackage{pythontex}
+
+\begin{pycode}
+def test(str1):
+    str1 = str1 + "\\\\ I was wondering if after all these years you'd like \\textbf{\\textit{to meet}}"
+    return str1
+\end{pycode}
+
+\newcommand{\PYtest}[1]{\py{test(#1)}}
+
+\begin{document}
+  \section{在LaTeX中使用Python}
+
+  \PYtest{"\\Large Hello, \\normalsize it's me"}
+
+\end{document}
