@@ -4,6 +4,8 @@
 
 ---
 
+## [Git](git/git.md)
+
 ## [LaTeX](latex/latex.md)
 
-## [Git](git/git.md)
+## [Ubuntu](ubuntu/ubuntu.md)
