@@ -1,0 +1,75 @@
+\documentclass[UTF8,oneside,fontset=founder,12pt]{ctexbook}
+
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}% 颜色支持
+\usepackage{graphicx}% 图形支持
+\usepackage[
+  colorlinks=true,
+  linkcolor=Navy,
+  urlcolor=Navy,
+  citecolor=Navy,
+  anchorcolor=Navy
+]{hyperref}% 设置超链接颜色
+\usepackage{ulem}% 各种类型的下划线
+\usepackage[
+  a4paper,
+  left=10mm,
+  right=10mm,
+  bottom=15mm,
+]{geometry}% 页面设置
+\usepackage{xeCJKfntef}% 提供中日韩文字的排版功能。本文用于在汉字下加点。
+\usepackage{amsmath}% 数学支持
+\usepackage{amssymb}% 数学符号
+
+\usepackage{latex_package/begonia}% 自定义tikz声明区宏包
+
+% 加粗文字下面的点
+\xeCJKsetup{underdot/symbol=\bfseries^^b7}
+
+% 设置章节标题左对齐，+=表示在原有格式上追加，如果只有=则表示完全替换
+\ctexset{
+  chapter/format += \raggedright,
+  section/format += \raggedright,
+  subsection/format += \raggedright,
+  subsubsection/format += \raggedright,
+}
+
+\setlength{\parindent}{2em}% 缩进
+\setlength{\parskip}{2ex} % 段间距
+
+
+% ------------------ 开始 -------------------
+\begin{document}
+
+% ------------------ 封面 -------------------
+\begin{titlepage}
+  \begin{center}
+    \huge\textbf{LaTeX 综合示例一}\normalsize
+  \end{center}
+  
+\end{titlepage}
+
+% ------------------ 前言 -------------------
+\frontmatter% 关闭前言部分的章节序号，页码使用罗马数字
+
+
+\chapter{序言}
+十七世纪后期，出现了一个崭新的数学分支——数学分析。它在数学领域中占据着主导地位。这种新数学思想的特点是，非常成功地运用了无限过程的运算即极限运算。而其中的微分和积分这两个过程，则构成系统微分学和积分学（通常简称为微积分）的核心，并奠定了全部分析学的基础。
+
+……
+
+我们希望目前这本新的者作，对于年轻的一代科学家将有所助益。我们深知本书有许多不足之处，因此，诚恳地欢迎批评指正，这对于本书今后的修订会有好处。
+
+\hfill R.\itshape 柯朗，\normalfont F.\itshape 约翰\normalfont
+
+\hfill 1965年6月
+
+% ------------------ 目录 -------------------
+\tableofcontents% 生成目录
+
+
+% ------------------ 正文 -------------------
+\mainmatter
+
+\input{part1}
+
+\end{document}

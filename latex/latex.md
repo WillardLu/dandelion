@@ -7,3 +7,5 @@
 ### [符号](symbol.md)
 
 ### [绘图](drawing.md)
+
+### [LaTeX + Python](latex_python.md)

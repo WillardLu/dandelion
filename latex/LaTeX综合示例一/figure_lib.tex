@@ -1,0 +1,199 @@
+\documentclass[UTF8,oneside,fontset=founder,12pt]{ctexbook}
+
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}% 颜色支持
+\usepackage[
+  colorlinks=true,
+  linkcolor=Navy,
+  urlcolor=Navy,
+  citecolor=Navy,
+  anchorcolor=Navy
+]{hyperref}% 设置超链接颜色
+\usepackage[
+  a4paper,
+  left=10mm,
+  right=10mm,
+  bottom=15mm,
+]{geometry}% 页面设置
+\usepackage{latex_package/begonia}% 自定义tikz声明区宏包
+\usepackage{amssymb}% 数学符号
+
+% 设置章节标题左对齐，+=表示在原有格式上追加，如果只有=则表示完全替换
+\ctexset{
+  chapter/format += \raggedright,
+  section/format += \raggedright,
+  subsection/format += \raggedright,
+  subsubsection/format += \raggedright,
+}
+
+\begin{document}
+
+
+% ------------------ 目录 -------------------
+\tableofcontents% 生成目录
+
+
+\chapter{引言}
+
+
+\section{实数连续统}
+
+
+\subsection{图1.1}
+%<*figure1.1>
+\begin{center}
+  \def\U{*0.033*\textwidth}
+  \begin{tikzpicture}[thick]
+    % 绘制轴
+    \draw(-10\U,0)--(10\U,0) coordinate[label={right:$L$}](xmax);
+    % 绘制轴上的点
+    \foreach \x/\xtext in{0/0,2\U/1,6\U/P}
+      \draw[shift={(\x,0)}](0pt,2pt)--(0pt,-2pt)node[below]{$\xtext$};
+    % 绘制范围括号
+    \draw[decorate,decoration={calligraphic brace,amplitude=10pt}](0,1ex)
+      --node[yshift=3ex]{$x$}++(6\U,0);
+    % 绘制方向指示
+    \draw(0,-4ex)--++(0,-2ex);
+    \draw[-{Stealth}](0,-5ex)--++(3\U,0);
+  \end{tikzpicture}\\[2ex]
+  
+  \vspace{4ex}
+  \begin{tikzpicture}[thick]
+    % 绘制轴
+    \draw(-10\U,0)--(10\U,0) coordinate[label={right:$L$}](xmax);
+    % 绘制轴上的点
+    \foreach \x/\xtext in{-6\U/P,0/0,2\U/1}
+      \draw[shift={(\x,0)}](0pt,2pt)--(0pt,-2pt)node[below]{$\xtext$};
+    % 绘制范围括号
+    \draw[decorate,decoration={calligraphic brace,amplitude=10pt}](-6\U,1ex)
+      --node[yshift=3ex]{$-x$}(0,1ex);
+    % 绘制方向指示
+    \draw(0,-4ex)--++(0,-2ex);
+    \draw[-{Stealth}](0,-5ex)--++(-3\U,0);
+  \end{tikzpicture}\\[2ex]
+
+  图1.1\quad 数轴
+\end{center}
+%</figure1.1>
+
+
+\subsection{图1.6}
+%<*figure1.6>
+\begin{center}
+\begin{tikzpicture}[thick]
+  \def\U{*0.04*\textwidth}
+  \draw(-1\U,0)--(19\U,0) coordinate(xmax);
+  \draw(0,0) arc[start angle=180,end angle=0,x radius=9\U,y radius=9\U];
+  % 计算c点y坐标值
+  \pgfmathparse{sqrt(4*14)}
+  \path
+    coordinate (c) at (4\U,\pgfmathresult\U);
+  \draw(9\U,0)--node[yshift=-7ex,right]{$\displaystyle\frac{x+y}{2}$}++(0,9\U);
+  \draw(4\U,0)--node[right]{$\sqrt{xy}$}(c);
+  \draw[dashed](0,0)--++(c);
+  \draw[dashed](c)--(18\U,0);
+  \draw[decorate,decoration={calligraphic brace,amplitude=8pt}](4\U,0)--node[yshift=-3.5ex]{x}(0,0);
+  \draw[decorate,decoration={calligraphic brace,amplitude=8pt}](18\U,0)--node[yshift=-3.5ex]{y}(4\U,0);
+\end{tikzpicture}\\[2ex]
+
+图1.6\quad $x$和$y$的几何平均值和算术平均值
+\end{center}
+%</figure1.6>
+
+
+\section{函数的概念}
+
+
+\subsection{图1.7}
+%<*figure1.7>
+\begin{center}
+\begin{tikzpicture}[thick]
+  \def\U{*0.027*\textwidth}
+  % 绘制坐标轴
+  \draw[-{Stealth}](-2\U,0)--(18\U,0) coordinate[label={right:$x$}];
+  \draw[-{Stealth}](0,-2\U)--(0,13\U) coordinate[label={above:$y$}];
+  % 设定坐标点
+  \path
+    coordinate(x) at (11\U,0)
+    coordinate(y) at (0,7\U)
+    coordinate(c) at (11\U,7\U)
+    coordinate(c1) at (7\U,5\U)
+    coordinate(c2) at (15\U,9\U);
+  \draw[dashed](y)--(c)--(x);
+  % 绘制曲线
+  \draw(7\U,5\U) cos(11\U,7\U) sin(15\U,9\U);
+  % 绘制各点标签
+  \draw
+    (y)node[dot,label={left:$y$}]{}
+    (c)node[dot]{}
+    (x)node[dot,label={below:$x$}]{}
+    (0,0)node[dot,label={below left:$0$}]{};
+\end{tikzpicture}\\[2ex]
+
+图1.7\quad 函数的图形
+\end{center}
+%</figure1.7>
+
+
+\subsection{图1.8}
+%<*figure1.8>
+\begin{center}
+\begin{tikzpicture}[thick]
+  \def\U{*0.027*\textwidth}
+  \pyc{xa, ya, _ = latex_math("linear_equation_in_two_unknowns;5,4,14,0,0,4,5,0;Xa,Ya")}
+  \draw[-{Stealth}](-8\U,4\U)--(16\U,4\U) coordinate[label={right:$x$}];
+  \draw[-{Stealth}](-8\U,0)--(16\U,0) coordinate[label={right:$y$}];
+  \path
+    coordinate(x) at (5\U,4\U)
+    coordinate(b) at (5\U,0)
+    coordinate(y) at (14\U,0)
+    % 计算x-y线与b-0（x轴原点，实际制图坐标是（0,4\U））线的交叉点
+    coordinate(z) at (\Xa\U,\Ya\U);
+  \draw[dashed](0,4\U)--(0,0);
+  \draw(z)--(y)node[dot,label={below:$y$}]{};
+  \draw(z)--(b)node[dot,label={below:$b$}]{};
+  \draw(z)node[dot,label={left:0}]{}--(0,0)node[dot,label={below:0}]{};
+  % 计算z-0（y轴原点）直线与x轴的交叉点
+  \pyc{latex_math("linear_equation_with_one_unknown;1,4," + str(xa) + "," + str(ya) + ",0,0;Xb")}
+  \draw
+    (0,4\U)node[dot,label={below left:$0$}]{}
+    (x)node[dot,label={below:$x$}]{}
+    (\Xb\U,4\U)node[dot,label={below left:$-\frac{b}{a}$}]{};
+  \draw(-5\U,0.7\U)node{$y=ax+b$};
+\end{tikzpicture}\\[2ex]
+
+\begin{tikzpicture}
+  \def\U{*0.027*\textwidth}
+  \draw[-{Stealth}](-14\U,5.5\U)--(10\U,3\U) coordinate[label={right:$x$}](xmax);
+  \draw[-{Stealth}](-14\U,-5\U)--(10\U,-4.5\U) coordinate[label={right:$y$}](xmax);
+  % 已知横坐标计算纵坐标
+  % X点
+  \pyc{y0, _ = latex_math("linear_equation_with_one_unknown;0,3,-14,5.5,10,3;Ya")}
+  % x1点
+  \pyc{y1, _ = latex_math("linear_equation_with_one_unknown;0,-6,-14,5.5,10,3;Yb")}
+  % x2点
+  \pyc{y2, _ = latex_math("linear_equation_with_one_unknown;0,-2,-14,5.5,10,3;Yc")}
+  % 通过x、x1、x2与原点（z）的直线与y轴计算交点
+  \pyc{latex_math("linear_equation_in_two_unknowns;3," + str(y0) + ",0,0,-14,-5,10,-4.5;Xaa,Yaa")}
+  \pyc{latex_math("linear_equation_in_two_unknowns;-6," + str(y1) + ",0,0,-14,-5,10,-4.5;Xba,Yba")}
+  \pyc{latex_math("linear_equation_in_two_unknowns;-2," + str(y2) + ",0,0,-14,-5,10,-4.5;Xca,Yca")}
+  % 设置好要用到的坐标点，方便后面调用。
+  \path
+    coordinate (z) at (0, 0)
+    coordinate (x) at (3\U,\Ya\U)
+    coordinate (y) at (\Xaa\U,\Yaa\U)
+    coordinate (x1) at (-6\U,\Yb\U)
+    coordinate (y1) at (\Xba\U,\Yba\U)
+    coordinate (x2) at (-2\U,\Yc\U)
+    coordinate (y2) at (\Xca\U,\Yca\U);
+  \draw(x)node[dot,label={$x$}]{}--(y)node[dot,label={below:$y$}]{};
+  \draw(x1)--(y1);
+  \draw(x2)--(y2);
+  \draw(z)node[dot,label={right:0}]{};
+  \draw(-8\U,-3\U)node{$y=\frac{ax+b}{cx+d}$};
+\end{tikzpicture}\\[2ex]
+
+图1.8\quad 映射
+\end{center}
+%</figure1.8>
+
+\end{document}
