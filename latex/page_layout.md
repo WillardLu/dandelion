@@ -6,3 +6,4 @@
 2. [在LaTeX的几何图形内嵌入图片](LaTeX：在几何图形中嵌入图片/在LaTeX的几何图形内嵌入图片.md)
 3. [LaTeX之listings宏包自定义代码样式示例](LaTeX之listings宏包自定义代码样式示例/LaTeX之listings宏包自定义代码样式示例.md)
 4. [使用paracol宏包实现中英文双栏排版示例](使用paracol宏包实现中英文双栏排版示例/使用paracol宏包实现中英文双栏排版示例.md)
+5. [LaTeX之tcolorbox宏包应用示例](LaTeX之tcolorbox宏包应用示例/LaTeX之tcolorbox宏包应用示例.md)
