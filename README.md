@@ -4,6 +4,8 @@
 
 ---
 
+## [人工智能](ai/ai.md)
+
 ## [Git](git/git.md)
 
 ## [LaTeX](latex/latex.md)
