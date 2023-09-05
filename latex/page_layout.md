@@ -8,3 +8,5 @@
 4. [使用paracol宏包实现中英文双栏排版示例](使用paracol宏包实现中英文双栏排版示例/使用paracol宏包实现中英文双栏排版示例.md)
 5. [LaTeX之tcolorbox宏包应用示例](LaTeX之tcolorbox宏包应用示例/LaTeX之tcolorbox宏包应用示例.md)
 6. [LaTeX：表格颜色设置](LaTeX：表格颜色设置/LaTeX：表格颜色设置.md)
+7. [LaTeX的一般图文混排介绍](LaTeX的一般图文混排介绍/LaTeX的一般图文混排介绍.md)
+8. [LaTeX之表格中多列合并时表格竖线不显示的解决方法](LaTeX之表格中多列合并时表格竖线不显示的解决方法/LaTeX之表格中多列合并时表格竖线不显示的解决方法.md)

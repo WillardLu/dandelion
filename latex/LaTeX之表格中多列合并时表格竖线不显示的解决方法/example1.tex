@@ -1,0 +1,73 @@
+% 繁星间漫步，陆巍的博客
+\documentclass[UTF8]{ctexart}
+
+% 注意宏包顺序，有可能会报错
+\usepackage{geometry}% 用于页面设置
+\usepackage{booktabs}% 增强表格功能
+\usepackage{tabularx}% 更多表格功能
+\usepackage{multirow}% 支持表格的多行合并
+\usepackage{qtree}% 绘制树形图
+
+% 设置为A4纸
+\geometry{
+  a4paper,
+  left = 19.1mm,
+  right = 19.1mm,
+  top = 25.4mm,
+  bottom = 25.4mm
+}
+
+
+% 定义表格对齐方式
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\begin{document}
+
+\section{未经处理的表格}
+\begin{tabular}{|C{10mm}C{10mm}C{20mm}C{20mm}|C{10mm}C{10mm}C{20mm}C{20mm}|}
+  \bottomrule
+  \multicolumn{3}{c}{推导步骤} & 选择候选式 & \multicolumn{3}{c}{推导步骤} & 选择候选式\\
+  \hline
+  E & $\Rightarrow$ & E + E & E $\Rightarrow$ E + E & E & $\Rightarrow$ & E * E & E $\Rightarrow$ E * E\\
+  \hline
+  & $\Rightarrow$ & 3 + E & E $\Rightarrow$ var & & $\Rightarrow$ & E + E * E & E $\Rightarrow$ E + E\\
+  \hline
+  & $\Rightarrow$ & 3 + E * E & E $\Rightarrow$ E * E & & $\Rightarrow$ & 3 + E * E & E $\Rightarrow$ var\\
+  \hline
+  & $\Rightarrow$ & 3 + 4 * E & E $\Rightarrow$ var & & $\Rightarrow$ & 3 + 4 * E & E $\Rightarrow$ var\\
+  \hline
+  & $\Rightarrow$ & 3 + 4 * 6 & E $\Rightarrow$ var & & $\Rightarrow$ & 3 + 4 * 6 & E $\Rightarrow$ var\\
+  \hline
+  \multicolumn{4}{c}{\Tree [.E [.E 3 ] + [.E [.E 4 ] * [.E 6 ]]]} & \multicolumn{4}{c}{\Tree [.E [.E [.E 3 ] + [.E 4 ]] * [.E 6 ]]}\\
+  \toprule
+\end{tabular}
+
+\centerline{图3-3 二义性文法推导}
+
+
+\section{处理后的表格}
+% \multicolumn语句会造成表格中的竖线不显示，左边第1根竖线只能用增加一个空列来显示；
+% 后面的竖线可以手工用\vline添加竖线。
+\begin{tabular}{|p{0mm}C{10mm}C{10mm}C{20mm}C{20mm}|C{10mm}C{10mm}C{20mm}C{20mm}|}
+  \bottomrule
+  & \multicolumn{3}{c}{推导步骤} & 选择候选式 & \multicolumn{3}{c}{推导步骤} & 选择候选式\\
+  \hline
+  & E & $\Rightarrow$ & E + E & E $\Rightarrow$ E + E & E & $\Rightarrow$ & E * E & E $\Rightarrow$ E * E\\
+  \hline
+  & & $\Rightarrow$ & 3 + E & E $\Rightarrow$ var & & $\Rightarrow$ & E + E * E & E $\Rightarrow$ E + E\\
+  \hline
+  & & $\Rightarrow$ & 3 + E * E & E $\Rightarrow$ E * E & & $\Rightarrow$ & 3 + E * E & E $\Rightarrow$ var\\
+  \hline
+  & & $\Rightarrow$ & 3 + 4 * E & E $\Rightarrow$ var & & $\Rightarrow$ & 3 + 4 * E & E $\Rightarrow$ var\\
+  \hline
+  & & $\Rightarrow$ & 3 + 4 * 6 & E $\Rightarrow$ var & & $\Rightarrow$ & 3 + 4 * 6 & E $\Rightarrow$ var\\
+  \hline
+  & \multicolumn{4}{c}{\Tree [.E [.E 3 ] + [.E [.E 4 ] * [.E 6 ]]]}\vline & \multicolumn{4}{c}{\Tree [.E [.E [.E 3 ] + [.E 4 ]] * [.E 6 ]]}\vline\\
+  \toprule
+\end{tabular}
+
+\centerline{图3-3 二义性文法推导}
+
+\end{document}
