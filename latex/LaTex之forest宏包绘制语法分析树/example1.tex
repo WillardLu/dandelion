@@ -1,0 +1,79 @@
+% 繁星间漫步，陆巍的博客
+\documentclass[UTF8]{ctexart}
+
+% 注意宏包顺序，有可能会报错
+\usepackage{geometry}% 用于页面设置
+\usepackage{longtable}% 支持长表格跨页
+\usepackage{qtree}% 绘制语法分析树
+\usepackage{forest}% 绘制语法分析树
+
+% 设置为A4纸
+\geometry{
+  a4paper,
+  left = 19.1mm,
+  right = 19.1mm,
+  top = 25.4mm,
+  bottom = 25.4mm
+}
+
+% ------------------ 开始 -------------------
+\begin{document}
+qtree宏包绘制的语法分析树
+\begin{center}
+  \Tree [.$list$
+          [.$list$
+            [.$list$ [.$digit$ 9 ]]
+            -
+            [.$digit$ 5 ]
+          ]
+          +
+          [.$digit$ 2 ]
+      ]
+\end{center}
+
+forest宏包绘制的语法分析树一
+\begin{center}
+  \begin{forest}
+    [$list$,
+      [$list$,
+        [$list$ [$digit$ [9]]]
+        [-]
+        [$digit$ [5]]
+      ]
+      [+]
+      [$digit$ [2]]
+    ]
+  \end{forest}
+\end{center}
+
+forest宏包绘制的语法分析树二
+\begin{center}
+  \begin{forest}
+    [$list$,
+      [$list$,
+        [$list$ [$digit$ [9, tier = word]]]
+        [-, tier = word]
+        [$digit$ [5, tier = word]]
+      ]
+      [+, tier = word]
+      [$digit$ [2, tier = word]]
+    ]
+  \end{forest}
+\end{center}
+
+forest宏包绘制的语法分析树三
+\begin{center}
+  \begin{forest}
+    [$list$, s sep = 3em
+      [$list$, s sep = 2em
+        [$list$ [$digit$ [9, tier = word]]]
+        [-, tier = word]
+        [$digit$ [5, tier = word]]
+      ]
+      [+, tier = word, before computing xy={s/.average={s}{siblings}}]
+      [$digit$ [2, tier = word]]
+    ]
+  \end{forest}
+\end{center}
+
+\end{document}
