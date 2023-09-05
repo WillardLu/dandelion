@@ -1,0 +1,32 @@
+\documentclass[UTF8]{ctexart}
+
+\usepackage{tikz}
+
+\usetikzlibrary{datavisualization}
+
+% 设置章节标题左对齐，+=表示在原有格式上追加，如果只有=则表示完全替换
+\ctexset{
+  section/format += \raggedright,
+  subsection/format += \raggedright,
+  subsubsection/format += \raggedright,
+}
+
+
+\begin{document}
+
+
+\section{示例一}
+\tikz
+  \datavisualization[school book axes,visualize as line]
+  data[/data point/x=1]{
+    y
+    1
+    2
+  }
+  data[/data point/x=2]{
+    y
+    2
+    0.5
+  };
+  
+\end{document}

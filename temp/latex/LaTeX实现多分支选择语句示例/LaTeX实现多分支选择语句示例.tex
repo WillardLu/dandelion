@@ -1,0 +1,25 @@
+\documentclass[UTF8,a4paper]{ctexart}
+
+\usepackage{xifthen}
+
+\newcommand{\ifequals}[3]{\ifthenelse{\equal{#1}{#2}}{#3}{}}
+\newcommand{\case}[2]{#1 #2}
+\newenvironment{switch}[1]{\renewcommand{\case}{\ifequals{#1}}}{}
+
+% \newcommand定义的命令名称只能是由字母构成，不能包含其他符号，而\def则要宽泛得多。
+\def\figure_1{Draw figure1-1}
+
+\newcommand{\Figure}[1]{
+  \begin{switch}{#1}
+    \case{a}{\figure_1}
+    \case{b}{draw b}
+    \case{c}{draw c}
+  \end{switch}
+}
+
+\begin{document}
+\section*{多分支条件语句示例}
+  \Figure{d}
+
+  \figure_1
+\end{document}
