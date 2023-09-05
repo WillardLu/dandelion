@@ -7,3 +7,4 @@
 3. [LaTeX之listings宏包自定义代码样式示例](LaTeX之listings宏包自定义代码样式示例/LaTeX之listings宏包自定义代码样式示例.md)
 4. [使用paracol宏包实现中英文双栏排版示例](使用paracol宏包实现中英文双栏排版示例/使用paracol宏包实现中英文双栏排版示例.md)
 5. [LaTeX之tcolorbox宏包应用示例](LaTeX之tcolorbox宏包应用示例/LaTeX之tcolorbox宏包应用示例.md)
+6. [LaTeX：表格颜色设置](LaTeX：表格颜色设置/LaTeX：表格颜色设置.md)

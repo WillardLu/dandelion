@@ -2,6 +2,8 @@
 
 与LaTeX相关的各种文章。
 
+### [基础](basic.md)
+
 ### [排版](page_layout.md)
 
 ### [符号](symbol.md)
