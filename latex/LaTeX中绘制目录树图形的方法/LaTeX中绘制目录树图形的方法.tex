@@ -1,0 +1,86 @@
+% 繁星间漫步，陆巍的博客
+\documentclass[UTF8]{ctexart}
+
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}% 颜色支持
+\usepackage{dirtree}% 绘制目录树
+\usepackage[edges]{forest}% 绘制树状图形
+
+\setlength{\parindent}{2em}% 缩进
+\setlength{\parskip}{2ex} % 段间距
+
+\begin{document}
+
+
+\section{绘制目录树}
+
+
+\subsection{示例一}
+
+
+\subsubsection{使用dirtree宏包}
+\dirtree{%
+  .1 ..
+  .2 \textcolor{blue}{my\_project}.
+  .3 \textcolor{blue}{my\_project}.
+}
+
+
+\subsubsection{使用forest宏包}
+\begin{forest}
+  for tree={
+    grow'=0,
+    folder
+  }
+    [
+      .
+      [\textcolor{blue}{my\_project}
+        [\textcolor{blue}{my\_project}]
+      ]
+    ]
+\end{forest}
+
+
+\subsection{示例二}
+
+
+\subsubsection{使用dirtree宏包}
+\dirtree{%
+  .1 ..
+  .2 \textcolor{blue}{my\_project}.
+  .3 .gitignore.
+  .3 LICENSE.
+  .3 \textcolor{blue}{my\_project}.
+  .4 \_\_init\_\_.py.
+  .3 README.md.
+  .3 requirements.txt.
+  .3 setup.py.
+  .3 \textcolor{blue}{tests}.
+  .4 test\_my\_project.py.
+}
+
+
+\subsubsection{使用forest宏包}
+\begin{forest}
+  for tree={
+    grow'=0,
+    folder
+  }
+    [
+      .
+      [\textcolor{blue}{my\_project}
+        [.gitignore]
+        [LICENSE]
+        [\textcolor{blue}{my\_project}
+          [\_\_init\_\_.py]
+        ]
+        [README.md]
+        [requirements.txt]
+        [setup.py]
+        [\textcolor{blue}{tests}
+          [test\_my\_project.py]
+        ]
+      ]
+    ]
+\end{forest}
+
+\end{document}
