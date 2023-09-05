@@ -1,0 +1,112 @@
+% 繁星间漫步，陆巍的博客
+% 这里只考虑电子书形式，所以选择了oneside。
+% UTF8指源文件使用UTF8编码保存。
+% fontset=adobe意为设置adobe提供的中文字库
+\documentclass[oneside, UTF8, fontset = adobe]{ctexbook}
+
+\usepackage{geometry}% 用于页面设置
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}% 颜色支持
+\usepackage{graphicx}% 图形支持
+% 支持超链接，加载此宏包后，目录才可点击跳转。
+\usepackage[
+  colorlinks=true,
+  linkcolor=Navy,
+  urlcolor=Navy,
+  citecolor=Navy,
+  anchorcolor=Navy
+]{hyperref}
+
+% 设置纸张与边距
+% 这里只考虑电子书形式，所以页边距都设为1英寸。如果要打印出来，应根据相关规定或实际需要进行调整。
+\geometry{
+  a4paper,
+  left = 1in,
+  right = 1in,
+  top = 1in,
+  bottom = 1in
+}
+
+% 设置章节标题左对齐，+=表示在原有格式上追加，如果只有=则表示完全替换
+\ctexset{
+  chapter/format += \raggedright,
+  section/format += \raggedright,
+  subsection/format += \raggedright,
+  subsubsection/format += \raggedright,
+}
+
+\setlength{\parindent}{2em}% 缩进
+\setlength{\parskip}{2ex} % 段间距
+
+% 用来控制编译时只包含哪些部分，当调试内容很多的文档时，可以节省时间。
+% \includeonly{}
+
+
+% ------------------ 开始 -------------------
+\begin{document}
+
+\begin{titlepage}
+  \quad
+
+  \vspace{.15\textheight}
+  \begin{center}
+    \includegraphics[width = .2\textwidth]{images/cover.png}
+
+    \huge\textbf{CTeX宏包应用示例一}
+    \vfill
+    \normalsize 2022年8月12日
+  \end{center}  
+\end{titlepage}
+
+
+% ------------------ 前言 -------------------
+\frontmatter% 关闭前言部分的章节序号，页码使用罗马数字
+
+\chapter{前言}
+CTeX宏包应用示例。
+
+
+% ------------------ 目录 -------------------
+\tableofcontents% 生成目录
+
+
+% ------------------ 正文 -------------------
+\mainmatter
+
+% 载入tex文档
+%\include{}
+
+
+\chapter{现代诗}
+
+\section{胡适}
+
+\large\textbf{梦与诗}\normalsize
+
+\vspace{2ex}\itshape
+都是平常经验
+
+都是平常影象
+
+偶然涌到梦中来
+
+变幻出多少新奇花样
+
+\vspace{2ex}
+都是平常情感
+
+都是平常言语
+
+偶然碰着个诗人
+
+变幻出多少新奇诗句
+
+\vspace{2ex}
+醉过才知酒浓
+
+爱过才知情重
+
+你不能做我的诗
+
+正如我不能做你的梦
+
+\end{document}
