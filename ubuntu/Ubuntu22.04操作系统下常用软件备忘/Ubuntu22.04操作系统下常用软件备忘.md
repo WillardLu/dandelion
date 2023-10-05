@@ -2,8 +2,6 @@
 
 ---
 
-
-
 时间过得真快，不知不觉间Ubuntu的桌面版本已经到了22.04。本文记录我在Ubuntu 22.04下使用的部分软件，一方面供刚开始使用Ubuntu系统的朋友们参考，另外就是方便自己以后重装系统。下面介绍的软件，全部都是免费授权使用的，放心安装下载。
 
 内容比较多，请打开右侧的目录查看自己感兴趣的内容。
@@ -35,8 +33,6 @@ sudo apt install microsoft-edge-dev
 
 已默认安装。
 
-
-
 ### 二、输入法
 
 我本人用的是五笔输入法，拼音输入法就不介绍了，五笔输入法方面的介绍请看我的另一篇博客：Ubuntu20.04下可用的一些五笔输入法介绍。虽然标题是20.04版的，在22.04下部分输入法也可以用。注意那些键盘输入法系统是fcitx的输入法，要先安装fcitx：
@@ -57,15 +53,11 @@ fcitx-table-wubi和极点五笔虽然都有以上问题，但都还可以使用�
 
 **注意，Ubuntu 22.04下的输入源已经移到“键盘”菜单里面，所以如果要添加ibus下的输入法，要选择“设置”里面的“键盘”。**
 
-
-
 ### 三、个人待办事项管理软件
 
 我现在使用的是kuro软件，这是一个微软 to do 非官方的客户端，感觉还不错。kuro使用微软账号登录，因此可以和网页端、移动端的Microsoft to do同步。没有用过Microsoft to do的朋友可以先在手机上下载“to do”app感受一下。
 
 安装方法：直接打开主桌面左侧收藏夹栏的“Ubuntu Software”，也就是软件商店里面搜索“kuro”安装即可。
-
-
 
 ### 四、图片处理、图形设计
 
@@ -125,6 +117,12 @@ sudo snap install drawio
 #### 7、Pencil
 
 这也是一个功能强大的绘图软件，下载地址：[http://pencil.evolus.vn/Downloads.html](http://pencil.evolus.vn/Downloads.html)。注意，不要用apt安装同名的pencil软件，二者不一样。
+
+#### 8、LibreOffice Draw
+
+这个属于LibreOffice办公套件中的一员，在绘制各种图表方面功能很强。在绘制某些专业图表时，我认为比前面介绍的各种绘图软件都更好用。
+
+![LibreOffice Draw 示例图](libreoffice_draw.png)
 
 ### 五、PDF文档阅读器
 
