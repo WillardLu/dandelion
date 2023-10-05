@@ -322,12 +322,19 @@ sudo apt install okteta
 
 本来想用bless，但是安装后会闪退，所以就改用Okteta。
 
+![oketa界面](oketa.png)
+
+
+
 #### 5、Markdown编辑器 ——Marktext
 
 安装命令：
 
 ```shell
 sudo snap install marktext
+```
+
+![Marktext界面](marktext.png)
 
 #### 6、文档生成工具doxygen
 
