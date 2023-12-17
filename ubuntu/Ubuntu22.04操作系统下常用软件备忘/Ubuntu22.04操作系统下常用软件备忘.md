@@ -458,4 +458,14 @@ sudo apt install virtualbox
 
 ---
 
+### 二十六、系统还原工具timeshift
+
+安装命令：
+```shell
+sudo apt install timeshift
+```
+
+![timeshift界面](timeshift.png)
+
+
 持续更新中…
