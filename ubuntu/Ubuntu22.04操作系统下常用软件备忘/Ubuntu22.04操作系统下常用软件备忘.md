@@ -274,10 +274,6 @@ sudo snap install skype
 
 目前发现百度网盘（大概是4.14.5版本）的主窗口与悬浮窗都对快捷键“Ctrl+空格”有影响，这个快捷键我用于切换输入法。因此当百度网盘的主窗口或悬浮窗开着时，切换输入法就会出问题，在设置中关闭悬浮窗并关闭主窗口，让百度网盘在后台运行，就不会有影响。
 
-#### 2、竖果云
-
-下载地址：[https://www.jianguoyun.com/s/downloads/linux](https://www.jianguoyun.com/s/downloads/linux)
-
 ### 十六、游戏
 
 #### 1、Steam
@@ -326,33 +322,13 @@ sudo apt install okteta
 
 ![oketa界面](oketa.png)
 
-#### 5、Markdown编辑器 ——Marktext
+#### 5、Markdown编辑器 ——ghostwriter
 
 安装命令：
 
 ```shell
-sudo snap install marktext
+sudo snap install ghostwriter
 ```
-
-![Marktext界面](marktext.png)
-
-#### 6、文档生成工具doxygen
-
-安装命令：
-
-```shell
-sudo apt install doxygen
-sudo apt install doxygen-gui
-sudo apt install doxygen-doc
-```
-
-除了使用doxygen命令之外，还可以使用图形界面，命令如下：
-
-```shell
-doxywizard
-```
-
-![doxygen图形界面](https://img-blog.csdnimg.cn/21149a1643b04a26a06f891a3bad3e37.png#pic_center)
 
 ### 十八、屏幕录制工具
 
@@ -371,18 +347,6 @@ sudo apt install simplescreenrecorder
 ```shell
 sudo apt install obs-studio
 ```
-
-### 十九、数学工具
-
-#### 1、GeoGebra
-
-免费的课堂活动数字工具, 用于绘图计算, 几何作图, 白板协作等等。安装命令：
-
-```shell
-sudo apt install geogebra
-```
-
-![GeoGebra示意图](https://img-blog.csdnimg.cn/c5b1e3b7d98241cc9fa4ac9e5bc7d3b3.png#pic_center)
 
 ### 二十、同步与备份工具
 
