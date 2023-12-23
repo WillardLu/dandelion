@@ -1,6 +1,6 @@
-% 繁星间漫步，陆巍的博客
-\documentclass[UTF8]{ctexart}
+\documentclass{article}
 
+\usepackage[fontset=ubuntu]{ctex}
 \usepackage{geometry}% 用于页面设置
 \usepackage[dvipsnames, svgnames, x11names]{xcolor}% 颜色支持
 \usepackage{graphicx}% 图形支持
@@ -23,19 +23,12 @@
 	bottom = 1in
 }
 
-% 设置章节标题左对齐，+=表示在原有格式上追加，如果只有=则表示完全替换
-\ctexset{
-  section/format += \raggedright,
-  subsection/format += \raggedright,
-  subsubsection/format += \raggedright,
-}
-
 \setlength{\parindent}{2em}% 缩进
 \setlength{\parskip}{1ex} % 段间距
 
 
 \begin{document}
-  
+
 
 \section{使用wrapfig宏包}
 
