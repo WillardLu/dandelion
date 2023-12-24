@@ -10,6 +10,4 @@
 
 ## [LaTeX](latex/latex.md)
 
-## [Ubuntu](ubuntu/ubuntu.md)
-
 ## [未归类资料](other/other.md)
