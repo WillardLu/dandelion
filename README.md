@@ -9,5 +9,3 @@
 ## [Git](git/git.md)
 
 ## [LaTeX](latex/latex.md)
-
-## [未归类资料](other/other.md)
