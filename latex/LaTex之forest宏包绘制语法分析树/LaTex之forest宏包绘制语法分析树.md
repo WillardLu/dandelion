@@ -7,21 +7,21 @@
 ### 二、代码
 ```latex
 % 繁星间漫步，陆巍的博客
-\documentclass[UTF8]{ctexart}
+\documentclass[UTF8]{article}
 
 % 注意宏包顺序，有可能会报错
+\usepackage[fontset=ubuntu]{ctex}
 \usepackage{geometry}% 用于页面设置
-\usepackage{longtable}% 支持长表格跨页
 \usepackage{qtree}% 绘制语法分析树
 \usepackage{forest}% 绘制语法分析树
 
 % 设置为A4纸
 \geometry{
   a4paper,
-  left = 19.1mm,
-  right = 19.1mm,
-  top = 25.4mm,
-  bottom = 25.4mm
+  left=1in,
+  right=1in,
+  top=1in,
+  bottom=1in
 }
 
 % ------------------ 开始 -------------------
