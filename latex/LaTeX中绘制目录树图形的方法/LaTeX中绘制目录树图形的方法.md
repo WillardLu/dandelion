@@ -5,9 +5,8 @@
 - XeTeX 3.141592653-2.6-0.999993
 
 ### 二、完整示例代码
-```latex
-% 繁星间漫步，陆巍的博客
-\documentclass[UTF8]{ctexart}
+```tex
+\documentclass{article}
 
 \usepackage[dvipsnames, svgnames, x11names]{xcolor}% 颜色支持
 \usepackage{dirtree}% 绘制目录树
@@ -99,13 +98,13 @@
 ### 四、说明
 - forest宏包实际上使用的是tikz来绘制。另外，forest宏包还可以绘制语法树等图形。
 - 注意使用dirtree宏包时，第一行的代码
-```latex
+```tex
  \dirtree{%
  ```
 结尾的百分号（%）必须存在，否则编译报错。
 - 注意dirtress中，每一项是以小数点作为结束符号。
 - 因为forest实际调用的是tikz来绘制图形，所以tikz中的各种参数也可以使用，例如下面的代码：
-```latex
+```tex
   for tree={
     grow'=0,
     folder,
